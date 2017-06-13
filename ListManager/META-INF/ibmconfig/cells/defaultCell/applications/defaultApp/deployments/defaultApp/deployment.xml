@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appdeployment:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:appdeployment="http://www.ibm.com/websphere/appserver/schemas/5.0/appdeployment.xmi" xmi:id="Deployment_1497265598214">
+  <deployedObject xmi:type="appdeployment:ApplicationDeployment" xmi:id="ApplicationDeployment_1497265598214" deploymentId="0" startingWeight="1" binariesURL="$(APP_INSTALL_ROOT)/vitoss-pcNode01Cell/ListManager.ear" useMetadataFromBinaries="false" enableDistribution="true" createMBeansForResources="true" reloadEnabled="false" appContextIDForSecurity="href:vitoss-pcNode01Cell/ListManager" filePermission=".*\.dll=755#.*\.so=755#.*\.a=755#.*\.sl=755" allowDispatchRemoteInclude="false" allowServiceRemoteInclude="false" asyncRequestDispatchType="DISABLED" standaloneModule="false" enableClientModule="false">
+    <targetMappings xmi:id="DeploymentTargetMapping_1497265598214" enable="true" target="ServerTarget_1497265598214"/>
+    <classloader xmi:id="Classloader_1497265598214" mode="PARENT_LAST"/>
+    <modules xmi:type="appdeployment:WebModuleDeployment" xmi:id="WebModuleDeployment_1497265598214" deploymentId="1" startingWeight="10000" uri="ListManagerWeb.war" classloaderMode="PARENT_LAST" containsEJBContent="0">
+      <targetMappings xmi:id="DeploymentTargetMapping_1497265598215" target="ServerTarget_1497265598214"/>
+      <classloader xmi:id="Classloader_1497265598215"/>
+    </modules>
+    <modules xmi:type="appdeployment:WebModuleDeployment" xmi:id="WebModuleDeployment_1497265598215" deploymentId="1" startingWeight="10000" uri="ListManagerWebServices.war" classloaderMode="PARENT_LAST" containsEJBContent="0">
+      <targetMappings xmi:id="DeploymentTargetMapping_1497265598216" target="ServerTarget_1497265598214"/>
+      <classloader xmi:id="Classloader_1497265598216"/>
+    </modules>
+    <properties xmi:id="Property_1497265598214" name="metadata.complete" value="false"/>
+  </deployedObject>
+  <deploymentTargets xmi:type="appdeployment:ServerTarget" xmi:id="ServerTarget_1497265598214" name="server1" nodeName="vitoss-pcNode01"/>
+</appdeployment:Deployment>
